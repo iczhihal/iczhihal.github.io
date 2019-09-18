@@ -1,0 +1,18 @@
+html {
+  overflow-y: hidden; }
+
+body {
+  margin: 0; }
+
+html, body, .page-wrapper {
+  height: 100%; }
+
+.apl-navigation {
+  background-color: #22181c;
+  width: 8rem;
+  height: 100%;
+  display: table; }
+  .apl-navigation nav {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2rem; }

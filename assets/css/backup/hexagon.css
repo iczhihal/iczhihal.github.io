@@ -1,0 +1,162 @@
+
+/*******************************************************************************
+ *
+ * Hexagon base selectors
+ * @NOTE: Has 1:0.8660254 w/h ratio.
+ *
+ ******************************************************************************/
+.hexagon {
+    display: inline-block;
+    border-color: mediumvioletred;
+}
+.hexagon>div.middle {
+    background-color: mediumvioletred;
+}
+.hexagon>div:not(.middle) {
+    border-style: solid;
+    border-width: 0;
+}
+
+/**
+ * Default rotation
+ **/
+.hexagon:not(.flat)>div:not(.middle) {
+    width: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.hexagon:not(.flat)>div.top {
+    border-bottom-color: inherit;
+}
+.hexagon:not(.flat)>div.end {
+    border-top-color: inherit;
+}
+
+/**
+ * Flat rotation (30 deg)
+ **/
+.hexagon.flat>div { float: left; }
+.hexagon.flat>div:not(.middle) {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+.hexagon.flat>div.top {
+    border-right-color: inherit;
+}
+.hexagon.flat>div.end {
+    border-left-color: inherit;
+}
+
+
+/*******************************************************************************
+ *
+ * Size selectors
+ *
+ ******************************************************************************/
+
+/**
+ *
+ * 100vh
+ *
+ **/
+.hexagon:not(.flat).vh>.top, .hexagon:not(.flat).vh>.end {
+    border-left-width: 43.30127vh;
+    border-right-width: 43.30127vh;
+}
+.hexagon:not(.flat).vh>.top {
+    border-bottom-width: 25vh;
+}
+.hexagon:not(.flat).vh>.end {
+    border-top-width: 25vh;
+}
+.hexagon:not(.flat).vh>.middle {
+    height: 50vh;
+    width: 86.60254vh;
+}
+
+.hexagon.flat.vh>.top, .hexagon.flat.vh>.end {
+    border-bottom-width: 50vh;
+    border-top-width: 50vh;
+}
+.hexagon.flat.vh>.top {
+    border-right-width: 33.33vh;
+}
+.hexagon.flat.vh>.end {
+    border-left-width: 33.33vh;
+}
+.hexagon.flat.vh>.middle {
+    width: 66.67vh;
+    height: 100vh;
+}
+
+
+/**
+ *
+ * vh6
+ *
+ **/
+.hexagon:not(.flat).vh6>.top, .hexagon:not(.flat).vh6>.end {
+    border-left-width: 21.650635vh;
+    border-right-width: 21.650635vh;
+}
+.hexagon:not(.flat).vh6>.top {
+    border-bottom-width: 12.5vh;
+}
+.hexagon:not(.flat).vh6>.end {
+    border-top-width: 12.5vh;
+}
+.hexagon:not(.flat).vh6>.middle {
+    height: 25vh;
+    width: 43.30127vh;
+}
+
+.hexagon.flat.vh6>.top, .hexagon.flat.vh6>.end {
+    border-bottom-width: 25vh;
+    border-top-width: 25vh;
+}
+.hexagon.flat.vh6>.top {
+    border-right-width: 16.66vh;
+}
+.hexagon.flat.vh6>.end {
+    border-left-width: 16.66vh;
+}
+.hexagon.flat.vh6>.middle {
+    width: 33.34vh;
+    height: 50vh;
+}
+
+/**
+ *
+ * vh3
+ *
+ **/
+.hexagon:not(.flat).vh3>.top, .hexagon:not(.flat).vh3>.end {
+    border-left-width: 14.433756vh;
+    border-right-width: 14.433756vh;
+}
+.hexagon:not(.flat).vh3>.top {
+    border-bottom-width: 8.333333vh;
+}
+.hexagon:not(.flat).vh3>.end {
+    border-top-width: 8.333333vh;
+}
+.hexagon:not(.flat).vh3>.middle {
+    height: 16.666667vh;
+    width: 28.867513vh;
+}
+
+.hexagon.flat.vh3>.top, .hexagon.flat.vh3>.end {
+    border-bottom-width: 25vh;
+    border-top-width: 25vh;
+}
+.hexagon.flat.vh3>.top {
+    border-right-width: 16.66vh;
+}
+.hexagon.flat.vh3>.end {
+    border-left-width: 16.66vh;
+}
+.hexagon.flat.vh3>.middle {
+    width: 33.34vh;
+    height: 50vh;
+}
+

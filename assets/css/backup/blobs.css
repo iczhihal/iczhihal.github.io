@@ -1,0 +1,56 @@
+/*.blob {*/
+/*    display: inline-block;*/
+/*    border-color: red;*/
+/*    height: 33%;*/
+/*    width: 33%;*/
+/*    float: left;*/
+/*}*/
+/*.blob>.content {*/
+/*    display: inline-block;*/
+/*    height: 100%;*/
+/*    width: 33%;*/
+/*    position: relative;*/
+/*    background-color: yellowgreen;*/
+/*}*/
+/*.blob>div {*/
+/*    float:left;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.blob>.triangle {*/
+/*}*/
+/*.blob>.triangle>div {*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
+
+
+.sections {
+    display: inline-block;
+    width: 100%;
+}
+
+.blob {
+    display: table-column;
+    width: 50%;
+    transition: width 300ms;
+}
+.blob:first-child { float: left; }
+.blob:last-child { float: right; }
+.blob:first-child:not(:hover) {
+    width: 33.34%;
+}
+.blob:first-child:hover {
+    width: 66.66%;
+}
+.blob:last-child:not(:hover) {
+    width: 33.34%;
+}
+.blob:last-child:hover {
+    width: 66.66%;
+}
+
+.blob.black { background-color: #22181c; }
+.blob.white { background-color: #eaeaea; }
