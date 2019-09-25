@@ -15,13 +15,30 @@ a {
   color: inherit;
   transition: color 70ms;
   transition: transform 130ms;
-  outline: none; }
+  outline: none;
+  transform: scale(1) translateZ(0); }
   a:hover {
     color: #eaeaea;
-    transform: scale(1.1) !important; }
+    transform: translateX(-1rem) scale(1.1); }
   a:active {
     color: #aeabac;
-    transform: scale(0.95) !important; }
+    transform: translateX(1rem) scale(0.95); }
+
+.col {
+  display: table-cell;
+  vertical-align: middle; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+/**
+ * Other colour shade.
+ */
+i {
+  font-style: inherit;
+  color: #a56555; }
 
 canvas#anim {
   position: absolute;
@@ -29,31 +46,53 @@ canvas#anim {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; }
+  z-index: -1;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; }
 
-.apl-navigation {
-  width: 100%;
-  height: 100%;
-  display: table; }
-  .apl-navigation nav {
-    display: table-cell;
-    vertical-align: middle;
-    width: 50%;
-    padding: 2rem 2rem 2rem 2rem;
-    text-align: right; }
-    .apl-navigation nav a {
-      font-weight: bold;
-      font-size: 4.20rem;
-      text-decoration: none;
-      padding: 1rem 0;
-      display: block;
-      mix-blend-mode: exclusion;
-      color: #ff0; }
+nav {
+  width: 50%;
+  padding: 2rem;
+  text-align: right; }
+  nav a {
+    font-weight: bold;
+    font-size: 5rem;
+    text-decoration: none;
+    padding: 1rem 0;
+    display: block;
+    mix-blend-mode: exclusion;
+    color: #fff;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none; }
 
-.face {
-  display: table-cell;
-  vertical-align: middle; }
-  .face img {
-    height: auto;
-    width: 13rem;
-    mix-blend-mode: exclusion; }
+img {
+  height: auto;
+  width: auto;
+  mix-blend-mode: exclusion;
+  transform: translateZ(0);
+  max-height: 84vh; }
+
+.section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3rem;
+  transition: all 300ms;
+  opacity: 0;
+  visibility: hidden; }
+  .section p {
+    font-size: 2.5rem;
+    color: #68c189;
+    text-shadow: -4px 0 #6195a3, 0 4px #6195a3, 0 -4px #6195a3; }
+    .section p b {
+      font-size: 4rem;
+      text-shadow: -7px 0 #6195a3, 0 7px #6195a3, 0 -7px #6195a3; }
+  .section.active {
+    visibility: visible;
+    opacity: 1; }
