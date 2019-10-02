@@ -2,7 +2,8 @@ html {
   overflow-y: hidden;
   font-family: "Mansalva", cursive;
   font-kerning: auto;
-  color: #aeabac; }
+  color: #fff;
+  mix-blend-mode: exclusion !important; }
 
 body {
   margin: 0; }
@@ -18,10 +19,10 @@ a {
   outline: none;
   transform: scale(1) translateZ(0); }
   a:hover {
-    color: #eaeaea;
+    color: #fff;
     transform: translateX(-1rem) scale(1.1); }
   a:active {
-    color: #aeabac;
+    color: #fff;
     transform: translateX(1rem) scale(0.95); }
 
 .col {
@@ -38,7 +39,7 @@ a {
  */
 i {
   font-style: inherit;
-  color: #a56555; }
+  color: #fff; }
 
 canvas#anim {
   position: absolute;
@@ -88,11 +89,11 @@ img {
   visibility: hidden; }
   .section p {
     font-size: 2.5rem;
-    color: #68c189;
-    text-shadow: -4px 0 #6195a3, 0 4px #6195a3, 0 -4px #6195a3; }
+    color: #fff;
+    text-shadow: -4px 0 #444, 0 4px #444, 0 -4px #444; }
     .section p b {
       font-size: 4rem;
-      text-shadow: -7px 0 #6195a3, 0 7px #6195a3, 0 -7px #6195a3; }
+      text-shadow: -7px 0 #444, 0 7px #444, 0 -7px #444; }
   .section.active {
     visibility: visible;
     opacity: 1; }
